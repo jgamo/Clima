@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                             city = response.getString("name");
                             JSONObject main = response.getJSONObject("main");
                             temp = main.getInt("temp")-273;
-                            description = response.getJSONArray("weather").getJSONObject(0).getString("description");
+                            description = response.getJSONArray("weather").getJSONObject(0).getString("main");
                             Intent act = new Intent(MainActivity.this, mostrarDatos.class);
                             act.putExtra("city", city);
                             act.putExtra("temp", temp);
@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        Log.d("Response", response.toString());
-                        Toast.makeText(getApplicationContext(), "CITY  " + city + "\n TEMP: " + temp + "\n" + "DESCRIPTION: " + description, Toast.LENGTH_SHORT).show();
+                        //Log.d("Response", response.toString());
+                        //Toast.makeText(getApplicationContext(), "CITY  " + city + "\n TEMP: " + temp + "\n" + "DESCRIPTION: " + description, Toast.LENGTH_SHORT).show();
                     }
                 } , new Response.ErrorListener() {
                     @Override

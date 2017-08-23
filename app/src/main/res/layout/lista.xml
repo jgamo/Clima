@@ -23,7 +23,8 @@
         <ListView
             android:id="@+id/listView"
             android:layout_width="156dp"
-            android:layout_height="197dp" />
+            android:layout_height="197dp"
+            android:background="@android:color/holo_blue_dark" />
     </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>
